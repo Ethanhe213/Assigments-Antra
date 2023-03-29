@@ -88,3 +88,26 @@ public class Solution {
         return false;
     }
 }
+
+412)
+public class Solution {
+    public IList<string> FizzBuzz(int n) {
+        List<string> a = new List<string>();
+        foreach(int i in Enumerable.Range(1,n)){
+            if(i%15==0){
+                a.Add("FizzBuzz");
+            }
+            else if(i%5==0){
+                a.Add("Buzz");
+            }
+            else if(i%3==0){
+                a.Add("Fizz");
+            }
+            else{
+                a.Add(i.ToString());
+            }
+        }
+        return a;
+
+    }
+}
