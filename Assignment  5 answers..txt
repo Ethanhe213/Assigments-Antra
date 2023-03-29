@@ -1,0 +1,90 @@
+
+Lynn Kim Yesterday, 4:47 PM
+Concept Questions:
+
+1. What type would you choose for the following “numbers”?
+A person’s telephone number(string)
+A person’s height (int)
+A person’s age(int)
+A person’s gender (Male, Female, Prefer Not To Answer)(string)
+A person’s salary(int)
+A book’s ISBN(string)
+A book’s price(money)
+A book’s shipping weight(int)
+A country’s population(int)
+The number of stars in the universe(long)
+The number of employees in each of the small or medium businesses in the  (int)
+United Kingdom (up to about 50,000 employees per business)
+2. What are the difference between value type and reference type variables?
+Memory allocation, one is stored on the stack  the other one is stored on the heap
+3. What happens when you divide an int variable by 0? 
+System.DivideByZeroException
+4. What happens when you divide a double variable by 0?
+
+Infinity
+5. What happens when you overflow an int variable, that is, set it to a value beyond its
+range? 
+
+It will wrap around to the other end of the range, positive becomes negative
+
+6. What is the difference between x = y++; and x = ++y;?
+
+x=y++:x=5,y=6
+x=++y: x=6,y=6
+7. What is the difference between break, continue, and return when used inside a loop
+statement?
+break:when a condition is met,stop the loop
+continue: skip current iteration and jump to next iteration
+return: return a value and stop current functions
+8. What are the three parts of a for statement and which of them are required?
+Provide this into a separate file in your github
+
+
+LeetCode Questions Numbers to do: 1, 9, 217, 412
+
+1)
+public class Solution {
+    public int[] TwoSum(int[] nums, int target) {
+        for(int i=0;i<nums.Length-1;i++){
+            for(int j=i+1;j<nums.Length;j++)
+                if(nums[i]+nums[j]==target){
+                   return new int[2]{i, j};
+                }
+             
+        
+
+        }
+        return new int[2];
+    }
+}
+9）public class Solution {
+    public bool IsPalindrome(int x) {
+        if(x<0){
+            return false;
+        }
+        String str=x.ToString();
+        int j=str.Length-1;
+        int i=0;
+        while (i<j){
+            if(str[i]!=str[j]){
+                return false;
+            }
+            i++;
+            j--;
+        }
+        return true;
+    }
+}
+217)public class Solution {
+    public bool ContainsDuplicate(int[] nums) {
+        for(int i=0;i<nums.Length-1;i++){
+            for(int j=i+1;j<nums.Length;j++){
+                if(nums[i]==nums[j]){
+                    return true;
+                }
+                
+            }
+        }
+        return false;
+    }
+}
